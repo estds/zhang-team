@@ -1,0 +1,31 @@
+<section class="event-info mb-3">
+  <div class="card-group">
+    <div class="card bg-dark text-white">
+      <div class="card-body p-1 d-flex align-items-center text-truncate">
+        <div class="text-white-50 p-2 border-right"><i class="fas fa-clock fa-2x fa-fw"></i></div>
+        <div class="py-1 ml-3 text-truncate">
+          {% if page.lang == "zh" %}
+          <h5 class="text-white-50 small text-truncate">时间</h5>
+          {% else %}
+          <h5 class="text-white-50 small text-truncate">Time</h5>
+          {% endif %}
+          <p class="mb-0 text-truncate"><b>{% if page.start %}{% include get_time.html time=page.start %}{% else %}TBD{% endif %}</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="card bg-secondary text-white">
+      <div class="card-body p-1 d-flex align-items-center text-truncate">
+        <div class="text-white-50 p-2 border-right"><i class="fas fa-map-marker-alt fa-2x fa-fw"></i></div>
+        <div class="py-1 ml-3 text-truncate">
+          {% if page.lang == "zh" %}
+          <h5 class="text-white-50 small text-truncate">地点</h5>
+          <p class="mb-0 text-truncate"><b>{% if page.place %}{{ page.place }}{% else %}待定{% endif %}</b></p>
+          {% else %}
+          <h5 class="text-white-50 small text-truncate">Place</h5>
+          <p class="mb-0 text-truncate"><b>{% if page.place %}{{ page.place }}{% else %}TBD{% endif %}</b></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+</section>
+

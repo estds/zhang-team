@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+  <head>
+    <meta charset="utf-8">
+    {% include meta.html %}
+    
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/estds/estds2020/favicon.ico">
+    
+    <!-- PWA settings -->
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="ESTDS2020">
+    <meta name="apple-mobile-web-app-title" content="ESTDS2020">
+    <meta name="theme-color" content="#494f54">
+    <meta name="msapplication-navbutton-color" content="#494f54">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" sizes="512x512" href="https://cdn.jsdelivr.net/gh/estds/estds2020/pwa/pwa512.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="https://cdn.jsdelivr.net/gh/estds/estds2020/pwa/pwa512.png">
+    <link rel="icon" sizes="192x192" href="https://cdn.jsdelivr.net/gh/estds/estds2020/pwa/pwa192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="https://cdn.jsdelivr.net/gh/estds/estds2020/pwa/pwa192.png">
+    
+    <link rel="alternate" href="https://estds.yicode.ac" hreflang="en-us" />
+    <link rel="alternate" href="https://estds.yicode.ac" hreflang="en-gb" />
+    <link rel="alternate" href="https://estds.yicode.ac/zh" hreflang="zh-cn" />
+    
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/estds/cdn-res/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fontawesome by CSS -->
+    <link href="https://cdn.jsdelivr.net/gh/estds/cdn-res/fontawesome/5.12.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link href="https://cdn.jsdelivr.net/gh/estds/cdn-res/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/estds/cdn-res/jquery/3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/estds/cdn-res/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom styles -->
+    <link href="/assets/css/estds.css" rel="stylesheet">
+  
+  </head>
+
+  <body class="{{ page.layout }}">
+    
+    {% include loading.html %}
+
+    <header id="top">
+      {% include header.html %}
+      {% include alert-area.html %}
+    </header>
+
+    <main role="main">
+      
+      <div class="album bg-light">
+
+      {{ content }}
+      
+      </div>
+      
+    </main>
+
+    <footer class="container text-muted py-5">
+      
+      {% include footer.html %}
+
+    </footer>
+    
+    <div class="message-area d-print-none">
+      {% include cookie-message.html %}
+      {% include ie-message.html %}
+    </div>
+    
+    <!-- QR Code JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/estds/cdn-res/qrcode/qrcode.min.js"></script>
+    
+    <!-- Customised JavaScript -->
+    <script src="https://cdn.jsdelivr.net/gh/estds/estds2020/assets/js/estds.js"></script>
+    
+    <!-- Register service worker -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+          console.log("Active service worker found, no need to register");
+        } else {
+          // Register the service worker
+          navigator.serviceWorker
+            .register("/service-worker.js", {
+              scope: "./"
+            })
+            .then(function (reg) {
+              console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+      }
+    </script>
+
+    
+  </body>
+</html>

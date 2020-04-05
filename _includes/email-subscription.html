@@ -1,0 +1,29 @@
+                              <div class="col-lg-6 mb-4">
+                                    <div class="card d-block h-100">
+                                          <img class="card-img-top" src="https://cdn.jsdelivr.net/gh/estds/estds2020/assets/img/mail-boxes-on-wall.jpg" alt="Newsletter" /> 
+                                          <div class="card-body">
+                                                <form name="subscribeform" id="subscribeform" action="" enctype="multipart/form-data">
+                                                      <div class="mb-2">
+                                                            <input type="email" name="email" placeholder="Email" id="email" class="form-control validate" autocomplete="email" /> 
+                                                      </div>
+                                                      <div class="input-group mb-2">
+                                                            <input type="text" name="attribute1" class="attributeinput form-control validate" value="" id="attribute1" placeholder="First name" autocomplete="given-name" /><input type="text" name="attribute2" class="attributeinput form-control" value="" id="attribute2" placeholder="Last name" autocomplete="family-name" /> 
+                                                      </div>
+                                                      <div class="mb-2">
+                                                            <select name="attribute3" class="custom-select attributeinput form-control validate" id="attribute3"><optgroup label="Title"><option value="1">Mr.</option><option value="2">Ms.</option><option value="3">Mrs.</option><option value="4">Miss.</option><option value="5">Dr.</option><option value="6">Prof.</option></optgroup></select> 
+                                                      </div>
+                                                      <div style="display:none;">
+                                                            <input type="hidden" name="htmlemail" value="1" /> <input type="hidden" name="list[3]" value="signup" /> <input type="hidden" name="listname[3]" value="ESTDS Forum" /> <input type="text" name="VerificationCodeX" value="" size="20" class="form-control" /> 
+                                                      </div>
+                                                      <div>
+                                                            {% if page.lang == "zh" %}
+                                                            <button class="btn btn-success" onclick="if (checkform()) {submitForm();} return false;">订阅邮件</button><span id="result" class="d-inline-block ml-2 small"><span class="text-secondary"><i class="fas fa-caret-left mr-1"></i>获取最新消息</span></span> 
+                                                            {% else %}
+                                                            <button class="btn btn-success" onclick="if (checkform()) {submitForm();} return false;">Stay tuned</button><span id="result" class="d-inline-block ml-2 small"><span class="text-secondary"><i class="fas fa-caret-left mr-1"></i>for newsletters</span></span> 
+                                                            {% endif %}
+                                                      </div>
+                                                </form>
+                                          </div>
+                                    </div>
+                              </div>
+                              <script src="/assets/js/email-subscription.js"></script>

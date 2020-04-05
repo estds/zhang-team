@@ -1,0 +1,29 @@
+---
+layout: feed
+lang: en
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+	<title>{{ site.sname }}</title>
+	<link>{{ site.baseurl }}</link>
+	<description>{{ site.name }}</description>
+	<language>en-us</language>
+	<copyright>CC-BY-NC-SA 4.0 International</copyright>
+	<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+	<docs>{{ site.baseurl }}/blog</docs>
+	<managingEditor>estds@nhri.cn (ESTDS)</managingEditor>
+	<webMaster>estds@nhri.cn (ESTDS)</webMaster>
+	<ttl>60</ttl>
+	{% assign posts=site.posts | where:"lang", page.lang %}
+	{% for post in posts %}
+	<item>
+		<title>{{ post.title }}</title>
+		<link>{{ site.baseurl }}{{ post.url }}</link>
+		<description>{{ post.content | xml_escape }}</description>
+		<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		<guid>{{ site.baseurl }}{{ post.url }}</guid>
+	</item>
+	{% endfor %}
+	</channel>
+</rss>

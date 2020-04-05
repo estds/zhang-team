@@ -1,0 +1,6 @@
+name: Zhang's Team
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
+timezone: Asia/Shanghai
+livereload: true
+baseurl: https://zhang.yicode.ac

@@ -1,0 +1,16 @@
+                              <div class="col-lg-6 mb-4">
+                                    <div class="card d-block h-100">
+                                          <img class="card-img-top" src="https://cdn.jsdelivr.net/gh/estds/estds2020/assets/img/man-reading-newspaper.jpg" alt="More information" /> 
+                                          <div class="card-body">
+                                                {% if page.lang == "zh" %}
+                                                <h5 class="card-title">更多信息</h5>
+                                                <p class="card-text">您可以浏览我们所有的博文，获取更多信息。</p>
+                                                <a href="/zh/blog" class="btn btn-info">阅读所有<i class="fas fa-chevron-circle-right ml-1"></i></a>
+                                                {% else %}
+                                                <h5 class="card-title">More information</h5>
+                                                <p class="card-text">You could find more information by browsing through all our posts.</p>
+                                                <a href="/blog" class="btn btn-info">Read all<i class="fas fa-chevron-circle-right ml-1"></i></a>
+                                                {% endif %}
+                                          </div>
+                                    </div>
+                              </div>

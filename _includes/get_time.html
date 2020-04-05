@@ -1,0 +1,1 @@
+<time datetime="{{ include.time | date_to_xmlschema }}">{% if page.lang == 'zh' %}{{ include.time | date: "%Y年%m月%d日 %H:%M" }}{% else %}{{ include.time | date: "%-d %b %Y %H:%M" }}{% endif %}</time>

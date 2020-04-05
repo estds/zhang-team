@@ -1,0 +1,73 @@
+      {% if page.lang == "zh" %}
+
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row position-relative">
+            <div class="col-sm-8 col-md-7 pt-4">
+              <h4><a href="/zh/about" class="text-white">关于<i class="fas fa-angle-double-right text-light ml-1 small"></i></a></h4>
+              <p class="small text-white-50">水安全与可持续发展论坛是中国工程院国际工程科技发展战略高端论坛系列之一。论坛集中关注水资源及可持续发展，旨在促进开放、坦诚、有效、跨学科的讨论。论坛每三年在中国南京举办一次，古老浪漫的秦淮河与恢宏磅礴的长江在这里相遇。<a href="/zh/about" class="text-primary">[继续阅读...]</a></p>
+            </div>
+            <div class="col-sm-4 offset-md-1 pt-4">
+              <h4 class="text-white">更多<i class="fas fa-ellipsis-h ml-1 text-light small"></i></h4>
+              <ul class="list-unstyled">
+                <li><a href="/zh/programmes" class="text-light"  data-toggle="tooltip" data-placement="top" title="详细活动日程"><i class="fas fa-calendar-alt fa-fw mr-1"></i>议程</a></li>
+                <li><a href="/zh/invited" class="text-light"  data-toggle="tooltip" data-placement="top" title="特邀发言人信息"><i class="fas fa-user-circle fa-fw mr-1"></i>特邀</a></li>
+                <li><a href="/zh/blog" class="text-light"  data-toggle="tooltip" data-placement="top" title="新闻以及动态资讯"><i class="fas fa-rss fa-fw mr-1"></i>博客</a></li>
+                <li><a href="/zh/logistics" class="text-light"  data-toggle="tooltip" data-placement="top" title="会务支持相关"><i class="fas fa-map-signs fa-fw mr-1"></i>会务</a></li>
+                <li><a href="/zh/take-part" class="text-primary"  data-toggle="tooltip" data-placement="top" title="从这里开始参会"><i class="fas fa-user-plus fa-fw mr-1"></i>参会</a></li>
+              </ul>
+            </div>
+            <a href="/" id="language-switch" class="{{ page.lang }} text-light p-2" data-toggle="tooltip" data-placement="bottom" title="Switch to English"><i class="fas fa-language"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark px-0 bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/zh" id="estds-logo" class="navbar-brand d-flex align-items-center estds-logo">
+            <strong class="sr-only">Logo</strong>
+          </a>
+          <button class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            	<span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>		
+          </button>
+        </div>
+      </div>
+
+      {% else %}
+
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row position-relative">
+            <div class="col-sm-8 col-md-7 pt-4">
+              <h4><a href="/about" class="text-white">About<i class="fas fa-angle-double-right text-light ml-1 small"></i></a></h4>
+              <p class="small text-white-50">Water Security and Sustainability Forum is one of the ESTDS Forums sponsored by the Chinese Academy of Engineering. It has a clear focus on availability and sustainable management of water resources, and aims to bring forward open, frank, productive and multi-disciplinary discusssions. It is held every 3 years in Nanjing, China, where the ancient Qinhuai River of romance meets the mighty Yangtze. <a href="/about" class="text-primary">[Read on...]</a></p>
+            </div>
+            <div class="col-sm-4 offset-md-1 pt-4">
+              <h4 class="text-white">More<i class="fas fa-ellipsis-h ml-1 text-light small"></i></h4>
+              <ul class="list-unstyled">
+                <li><a href="/programmes" class="text-light"  data-toggle="tooltip" data-placement="top" title="Detailed of events"><i class="fas fa-calendar-alt fa-fw mr-1"></i>Programmes</a></li>
+                <li><a href="/invited" class="text-light"  data-toggle="tooltip" data-placement="top" title="Confirmed speakers"><i class="fas fa-user-circle fa-fw mr-1"></i>Invited</a></li>
+                <li><a href="/blog" class="text-light"  data-toggle="tooltip" data-placement="top" title="News and updates"><i class="fas fa-rss fa-fw mr-1"></i>Blog</a></li>
+                <li><a href="/logistics" class="text-light"  data-toggle="tooltip" data-placement="top" title="Logistic support"><i class="fas fa-map-signs fa-fw mr-1"></i>Logistics</a></li>
+                <li><a href="/take-part" class="text-primary"  data-toggle="tooltip" data-placement="top" title="Get involved here"><i class="fas fa-user-plus fa-fw mr-1"></i>Take part</a></li>
+              </ul>
+            </div>
+            <a href="/zh" id="language-switch" class="{{ page.lang }} text-light p-2" data-toggle="tooltip" data-placement="bottom" title="切换至中文"><i class="fas fa-language"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark px-0 bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="/" id="estds-logo" class="navbar-brand d-flex align-items-center estds-logo">
+            <strong class="sr-only">Logo</strong>
+          </a>
+          <button class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            	<span class="icon-bar top-bar"></span>
+              <span class="icon-bar middle-bar"></span>
+              <span class="icon-bar bottom-bar"></span>		
+          </button>
+        </div>
+      </div>
+
+      {% endif %}

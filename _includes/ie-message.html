@@ -1,0 +1,28 @@
+<!--[if IE ]>
+<div id="msie-alert" class="animated slideInDown faster toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false">
+  <div class="toast-header">
+    {% if page.lang == "zh" %}
+    <strong class="mr-auto">信息</strong>
+    <small>来自未来</small>
+    {% else %}
+    <strong class="mr-auto">Message</strong>
+    <small>From future</small>
+    {% endif %}
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="toast-body">
+    {% if page.lang == "zh" %}
+    伙计，放弃你的Internet Explorer吧！<a href="https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-perils-of-using-Internet-Explorer-as-your-default-browser/ba-p/331732">微软自己都放弃它了</a>。
+    {% else %}
+    Dude, get rid of your Internet Explorer! Even <a href="https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-perils-of-using-Internet-Explorer-as-your-default-browser/ba-p/331732">Microsoft has given up on it</a>.
+    {% endif %}
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    setTimeout(function() { $('#msie-alert').toast('show');}, 2000);
+  });
+</script>
+<![endif]-->

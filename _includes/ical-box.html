@@ -1,0 +1,69 @@
+                    <div id="ical-feed-box" class="input-group input-group-sm mb-3 load_js_{{ include.load_js | default: 'false' }}">
+                      {% if page.lang == "zh" %}
+                      <input id="ical-feed-url" type="text" class="form-control text-monospace" value="{{ site.baseurl }}/zh/programmes/ical.ics" readonly="readonly">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-success btn-copy" data-clipboard-target="#ical-feed-url" data-toggle="tooltip" data-placement="top" title="拷贝"><i class="far fa-fw fa-copy"></i></button>
+                        <a href="/zh/faq/#add-to-calendars" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="这是什么？"><i class="far fa-fw fa-question-circle"></i></a>
+                      </div>
+                      {% else %}
+                      <input id="ical-feed-url" type="text" class="form-control text-monospace" value="{{ site.baseurl }}/programmes/ical.ics" readonly="readonly">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-success btn-copy" data-clipboard-target="#ical-feed-url" data-toggle="tooltip" data-placement="top" title="Copy it"><i class="far fa-fw fa-copy"></i></button>
+                        <a href="/faq/#add-to-calendars" class="btn btn-outline-secondary" data-toggle="tooltip" data-placement="top" title="What is this?"><i class="far fa-fw fa-question-circle"></i></a>
+                      </div>
+                      {% endif %}
+                    </div>
+
+
+                    {% if include.load_js == "true" %}
+                    <script src="https://cdn.jsdelivr.net/gh/estds/cdn-res/clipboard.js/2.0.4/clipboard.min.js"></script>
+                    <script>
+                      $(document).ready(function() {
+
+                        // Click .btn-copy buttons to copy to clipboard
+
+                        var clipboard = new ClipboardJS('.btn-copy');
+
+                        clipboard.on('success', function(e) {
+                          {% if page.lang == "zh" %}
+                          setTooltip(e.trigger, '成功!');
+                          {% else %}
+                          setTooltip(e.trigger, 'Success!');
+                          {% endif %}
+                          hideTooltip(e.trigger);
+                          e.clearSelection();
+                        });
+
+                        clipboard.on('error', function(e) {
+                          {% if page.lang == "zh" %}
+                          setTooltip(e.trigger, '哎呀出错咯');
+                          {% else %}
+                          setTooltip(e.trigger, 'Oops, something went wrong.');
+                          {% endif %}
+                          hideTooltip(e.trigger);
+                        });
+
+
+                        // Set Tooltips for .btn-copy buttons
+
+                        function setTooltip(btn, message) {
+                          $(btn).tooltip('hide')
+                            .attr('data-original-title', message)
+                            .tooltip('show');
+                        }
+
+                        function hideTooltip(btn, message) {
+                          setTimeout(function() {
+                            {% if page.lang == "zh" %}
+                            $(btn).tooltip('hide').attr('data-original-title', '拷贝');
+                            {% else %}
+                            $(btn).tooltip('hide').attr('data-original-title', 'Copy it');
+                            {% endif %}
+                          }, 700);
+                        }
+
+
+                      });
+
+                    </script>
+                    {% endif %}

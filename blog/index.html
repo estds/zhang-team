@@ -1,0 +1,61 @@
+---
+layout: default
+lang: en
+title: Blog
+ref: blog-posts
+---
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-9">
+      {% include breadcrumb.html %}
+      
+      <div aria-label="content">
+
+        <h1>{{ page.title }}</h1>
+        
+        <!-- RSS Modal -->
+        <div class="modal fade" id="rss-feed-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close ml-4" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <p class="mb-3">You may use the following RSS feed to read our posts:</p>
+                {% include rss-box.html load_js="true" %}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="meta small text-secondary d-flex justify-content-between">
+          <div class="meta meta-date"></div>
+          <div class="meta meta-languages meta-rss d-flex align-items-center">
+            <div class="rss-feed bg-info rounded mr-1"><a href="#" class="text-white px-1" role="button" data-toggle="modal" data-target="#rss-feed-modal"><i class="fas fa-rss-square"></i></a></div>
+            <div class="languages bg-dark rounded d-flex align-items-center {{ page.lang }}">{% include languages.html %}</div>
+          </div>
+        </div>
+        
+        {% assign posts=site.posts | where:"lang", page.lang %}
+        <div class="content my-3">
+            
+            {% for post in posts %}
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h5>
+                  <p class="card-text">{{ post.abstract }}<a href="{{ post.url }}" title="{{ post.title }}" class="badge badge-dark mx-1">More<i class="far fa-arrow-alt-circle-right ml-1"></i></a></p>
+                  <p class="card-text text-secondary meta small"><i class="far fa-calendar-alt mr-1"></i>{% include get_date.html time=post.date %}</p>
+                </div>
+              </div>
+            {% endfor %}
+
+        </div>
+
+      </div>
+    </div>
+    <div class="col-md-3">
+      {% include right-sidebar.html %}
+    </div>
+  </div>
+</div>

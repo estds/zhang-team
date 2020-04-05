@@ -1,0 +1,32 @@
+<div class="alert-area alert-warning d-print-none d-none">
+  <div class="container">
+    <div class="alert-bar d-flex justify-content-between align-items-center small py-1">
+      <div class="text-truncate">
+        <i class="fas fa-exclamation-triangle fa-fw mr-1"></i>{% if page.lang == "zh" %}您需要注意<a class="alert-link" data-toggle="collapse" href="#alert-list-area" role="button" aria-expanded="false" aria-controls="alert-list-area"><span id="alert-count"></span>条提示</a>。{% else %}Your attention is needed on <a class="alert-link" data-toggle="collapse" href="#alert-list-area" role="button" aria-expanded="false" aria-controls="alert-list-area"><span id="alert-count"></span></a>.{% endif %}
+      </div>
+      <button class="btn btn-link btn-sm collapsed text-warning" type="button" data-toggle="collapse" data-target="#alert-list-area" aria-expanded="false" aria-controls="alert-list-area"><i class="fas fa-angle-up"></i></button>
+    </div>
+    <div class="alert-warning collapse pb-2 small" id="alert-list-area">
+      <hr class="m-0">
+      <ul id="alert-list" class="list-group list-group-flush">
+      {% include alert-list.html %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var alert_count = $("#alert-list li").length;
+
+  if (alert_count > 0) {
+    $(".alert-area").removeClass('d-none');
+    {% if page.lang == "zh" %}$("#alert-count").append(alert_count);{% else %}
+    if (alert_count == 1) {
+      $("#alert-count").append(alert_count + ' alert');
+    } else {
+      $("#alert-count").append(alert_count + ' alerts');
+    }{% endif %}
+  }
+});
+</script>

@@ -1,0 +1,49 @@
+---
+layout: default
+title: Home
+lang: en
+---
+
+      <section class="p-0">
+            {% include home-carousel.html %}
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                  <div class="col-md-9">
+                        <div class="row">
+                              {% include email-subscription.html %}
+                              
+                              {% assign posts=site.posts | where:"lang", page.lang %}
+                              
+                              {% for post in posts limit: 3 %}
+                              <!-- Card START -->
+                              <div class="col-lg-6 mb-4">
+                                    <div class="card d-block h-100">
+                                          <img class="card-img-top" src="{% if post.fimage %}https://cdn.jsdelivr.net/gh/estds/estds2020{{ post.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/estds2020/assets/img/card-image.jpg{% endif %}" alt="{{ post.title }}"/> 
+                                          <div class="card-body">
+                                                <h5 class="card-title">{{ post.title }}</h5>
+                                                <p class="card-text text-secondary meta small"><i class="far fa-calendar-alt mr-1"></i>{% include get_date.html time=post.date %}</p>
+                                                <p class="card-text">{{ post.abstract }}</p>
+                                                <a href="{{ post.url }}" class="btn btn-primary">{% if post.raction %}{{ post.raction }}{% else %}Read on{% endif %}<i class="fas fa-chevron-circle-right ml-1"></i></a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <!-- Card END -->
+                              {% endfor %}
+
+                              {% include all-posts-link.html %}
+
+                        </div>
+                  </div>
+                  
+                  <div class="col-md-3">
+                  {% include right-sidebar.html %}
+                  </div>
+                  
+              </div><!-- End of .row -->
+              
+        </div><!-- End of .container -->
+      </div><!-- End of .album -->
