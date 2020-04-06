@@ -2,18 +2,23 @@
 layout: default
 ---
 <main class="ribboned-page">
-  <div class="page-ribbon bg-primary bg-by-attr d-print-none" data-image="{% if page.fimage %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
+  <div class="page-ribbon bg-primary bg-by-attr d-print-none" data-image="{% if page.fimage and page.fimage_credit %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
   </div>
   <div class="container bg-white mb-5 z-depth-1">
-      {% include breadcrumb.html wrap_class="row teal lighten-5 py-3" list_class="bg-transparent mb-0 small px-md-5" %}
+    {% include breadcrumb.html wrap_class="row teal lighten-5 py-3" list_class="bg-transparent mb-0 small px-md-5" %}
     <div class="row">
       <div class="col-12 my-5 px-md-5">
         <div aria-label="content">
           <h1>{{ page.title }}</h1>
           {{ content }}
+          <ul class="list-inline my-3 small text-light">
+            {% if page.last_update %}<li class="list-item-line">Last update: <time datetime="{{ include.time | date_to_xmlschema }}">{{ page.last_update | date_to_string }}</time></li>{% endif %}
+            {% if page.fimage and page.fimage_credit %}<li class="list-item-line">Feature image: {{ page.fimage_credit }}</li>{% endif %}
+          </ul>
         </div>
       </div>
     </div>
   </div>
 </main>
+
 
