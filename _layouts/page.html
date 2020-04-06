@@ -11,9 +11,9 @@ layout: default
         <div aria-label="content">
           <h1>{{ page.title }}</h1>
           {{ content }}
-          <ul class="list-inline my-3 small text-light">
-            {% if page.last_update %}<li class="list-item-line">Last update: <time datetime="{{ include.time | date_to_xmlschema }}">{{ page.last_update | date_to_string }}</time></li>{% endif %}
-            {% if page.fimage and page.fimage_credit %}<li class="list-item-line">Feature image: {{ page.fimage_credit }}</li>{% endif %}
+          <ul class="my-3 small text-light">
+            {% if page.last_update %}<li>Last update: <time datetime="{{ include.time | date_to_xmlschema }}">{{ page.last_update | date_to_string }}</time></li>{% endif %}
+            {% if page.fimage and page.fimage_credit %}<li>Feature image: {{ page.fimage_credit }}</li>{% endif %}
           </ul>
         </div>
       </div>
