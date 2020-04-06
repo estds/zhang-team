@@ -12,7 +12,7 @@
     <ul class="list-inline small footer-nav">
       {% assign navigations = site.pages | where:"nav_group","footer" | sort: 'nav_order' %}
       {% for item in navigations %}
-      <li class="nav-item {% if item.url == page.url %}active{% endif %}">
+      <li class="list-inline-item {% if item.url == page.url %}active{% endif %}">
         <a href="{{ item.url }}" class="nav-link">
           {{ item.title }}
         </a>
