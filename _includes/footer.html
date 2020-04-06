@@ -2,13 +2,25 @@
 <footer class="page-footer text-center font-small wow fadeIn">
 
   <!--Call to action-->
-  <div class="py-5">
+  <div class="py-5 d-print-none">
     {% include share-buttons.html sns_button_class="btn-outline-warning" qr_button_class="btn-outline-light" %}
   </div>
   <!--/.Call to action-->
 
   <!--Copyright-->
   <div class="footer-copyright py-5">
+    <ul class="list-inline small text-muted float-md-right footer-nav">
+      {% assign navigations = site.pages | where:"nav_group","footer" | sort: 'nav_order' %}
+      {% for item in navigations %}
+      <li class="nav-item {% if item.url == page.url %}active{% endif %}">
+        <a href="{{ item.url }}" class="nav-link">
+          {{ item.title }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <hr class="my-3">
+    <p class="lead"><a href="/"><i class="fas fa-water mr-1"></i>{{ site.name}}</a></p>
     <p class="mb-0"><i class="fab fa-creative-commons fa-lg"></i><i class="fab fa-creative-commons-by fa-lg"></i><i class="fab fa-creative-commons-nc fa-lg"></i><i class="fab fa-creative-commons-sa fa-lg"></i></p>
     <p class="small">Unless otherwisely noted, content on this website is licensed under:<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-muted">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a></p>
   </div>
