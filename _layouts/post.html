@@ -1,34 +1,22 @@
 ---
 layout: default
 ---
-<div class="container py-5">
-  <div class="row">
-    <div class="col-md-9 left-col">
-      {% include breadcrumb.html %}
-
-      <div aria-label="content">
-
-        <h1>{{ page.title }}</h1>
-        <div class="meta small text-secondary d-flex justify-content-between">
-          <div class="meta meta-date"><i class="far fa-calendar-alt mr-1"></i>{% include get_date.html time=page.date %}</div>
-          {% if page.ref and page.lang %}
-          <div class="meta meta-languages"><div class="languages bg-dark rounded d-flex align-items-center {{ page.lang }}">{% include languages.html %}</div></div>
-          {% endif %}
-        </div>
-        
-        {% if page.fimage and page.fimage_credit %}
-        <div class="feature-image mt-3 position-relative rounded-top bg-by-attr" data-image="https://cdn.jsdelivr.net/gh/estds/estds2020{{ page.fimage }}">
-          <div class="credit-label text-truncate">{% if page.lang == "zh" %}图：{% else %}Photo: {% endif %}{{ page.fimage_credit }}</div>
-        </div>
-        {% endif %}
-
-        <div class="content rounded{% if page.fimage and page.fimage_credit %}-bottom mb-3{% else %} my-3{% endif %} bg-white px-2 py-3 p-md-4">
+<main class="ribboned-page post">
+  <div class="page-ribbon bg-primary bg-by-attr d-print-none" data-image="{% if page.fimage and page.fimage_credit %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/boat-on-water.jpg{% endif %}">
+  </div>
+  <div class="container bg-white mb-5 z-depth-1">
+    {% include breadcrumb.html wrap_class="row teal lighten-5 py-3" list_class="bg-transparent mb-0 small px-md-5" %}
+    <div class="row">
+      <div class="col-12 my-5 px-md-5">
+        <div aria-label="content">
+          <h1 class="mb-4">{{ page.title }}</h1>
           {{ content }}
+          <ul class="list-unstyled my-3 small text-light">
+            <li>Published: <time datetime="{{ include.time | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></li>
+            {% if page.fimage and page.fimage_credit %}<li>Feature image: {{ page.fimage_credit }}</li>{% endif %}
+          </ul>
         </div>
-
       </div>
     </div>
-    <div class="col-md-3 right-col d-print-none">
-    </div>
   </div>
-</div>
+</main>
