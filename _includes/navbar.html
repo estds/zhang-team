@@ -15,18 +15,14 @@
 
       <!-- Left -->
       <ul class="navbar-nav mr-auto">
+        {% assign navigations = site.pages | where:"nav_group","navbar" | sort: 'nav_order' %}
+        {% for item in navigations %}
         <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
+          <a href="{{ item.url }}" class="nav-link {% if item.url == page.url %}active{% endif %}">
+            {{ item.title }}
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/research">Research</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
+        {% endfor %}
       </ul>
 
     </div>
