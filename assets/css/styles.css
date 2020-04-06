@@ -6,11 +6,11 @@
 }
 
 .page-ribbon {
-	height: 60vh;
+	height: 80vh;
 }
 
 .ribboned-page > .container {
-	margin-top: -35vh;
+	margin-top: -55vh;
 	min-height: 80vh;
 }
 
