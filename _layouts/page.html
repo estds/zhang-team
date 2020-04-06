@@ -1,28 +1,10 @@
 ---
 layout: default
 ---
-<div class="container py-5">
-  <div class="row">
-    <div class="col-md-9 left-col">
-      {% include breadcrumb.html %}
-
-      <div aria-label="content">
-
-        <h1>{{ page.title }}</h1>
-        <div class="meta small text-secondary d-flex justify-content-between">
-          <div class="meta meta-date">{% if page.last_update %}<i class="fas fa-sync-alt mr-1"></i>{% include get_date.html time=page.last_update %}{% endif %}</div>
-          {% if page.ref and page.lang %}
-          <div class="meta meta-languages"><div class="languages bg-dark rounded d-flex align-items-center {{ page.lang }}">{% include languages.html %}</div></div>
-          {% endif %}
-        </div>
-
-        <div class="content rounded bg-white my-3 px-2 py-3 p-md-4">
-          {{ content }}
-        </div>
-
-      </div>
-    </div>
-    <div class="col-md-3 right-col d-print-none">
-    </div>
+<main class="ribboned-page">
+  <div class="page-ribbon bg-by-attr" data-image="{% if page.fimage %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
   </div>
-</div>
+  <div class="container">
+    {{ content }}
+  </div>
+</main>
