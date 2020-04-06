@@ -2,7 +2,7 @@
 layout: default
 ---
 <main class="ribboned-page">
-  <div class="page-ribbon bg-primary bg-by-attr" data-image="{% if page.fimage %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
+  <div class="page-ribbon bg-primary bg-by-attr d-print-none" data-image="{% if page.fimage %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
   </div>
   <div class="container bg-white mb-5 z-depth-1">
       {% include breadcrumb.html wrap_class="row teal lighten-5 py-3" list_class="bg-transparent mb-0 small px-5" %}
