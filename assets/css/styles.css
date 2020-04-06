@@ -56,5 +56,7 @@
 @media print {
 	.ribboned-page > .container {
 		margin-top: 1rem;
+		-webkit-box-shadow: none!important;
+		box-shadow: none!important;
 	}
 }
