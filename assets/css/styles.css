@@ -11,6 +11,7 @@
 
 .ribboned-page > .container {
 	margin-top: -35vh;
+	min-height: 80vh;
 }
 
 /* Navbar animation */
