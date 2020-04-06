@@ -5,6 +5,12 @@ layout: default
   <div class="page-ribbon bg-primary bg-by-attr" data-image="{% if page.fimage %}https://cdn.jsdelivr.net/gh/estds/zhang-team{{ page.fimage }}{% else %}https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/mountain-stream.jpg{% endif %}">
   </div>
   <div class="container bg-white mb-5 z-depth-1">
-    {{ content }}
+    <div class="row">
+      {% include breadcrumb.html %}
+      <div aria-label="content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
   </div>
 </main>
