@@ -14,6 +14,26 @@
 	min-height: 80vh;
 }
 
+/* share button styles */
+.share-buttons .share-button:hover {
+	color: #ffffff;
+}
+.share-buttons #facebook:hover {
+	background-color: #002e63;
+}
+.share-buttons #twitter:hover {
+	background-color: #2aaae0;
+}
+.share-buttons #weibo:hover {
+	background-color: #d52827;
+}
+.share-buttons #linkedin:hover {
+	background-color: #007ab9;
+}
+.share-buttons #email-share:hover {
+	background-color: #697c37;
+}
+
 /* Navbar animation */
 .navbar {
   background-color: rgba(0, 0, 0, 0.3); }
