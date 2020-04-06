@@ -2,7 +2,7 @@
   <div class="share-buttons" aria-label="Share buttons">
 
     <!-- Start: Toggle buttons for sharing -->
-    <div class="btn-group {{ include.button_group_class | default: 'w-auto' }}" role="group">
+    <div class="{{ include.button_group_class | default: 'w-auto' }}">
       <a tabindex="0" id="share-toggle-sns" href="#" class="popover-toggles no-action btn {{ include.sns_button_class | default: 'btn-warning' }}" role="button" data-popover-content="#popover-content-sns" data-trigger="focus">
         {% if page.lang == "zh" %}
         <i class="far fa-share-square fa-fw mr-1"></i>分享至
