@@ -4,12 +4,8 @@
   <!--Call to action-->
   <div class="py-5 d-print-none">
     {% include share-buttons.html sns_button_class="btn-outline-warning" qr_button_class="btn-outline-light" %}
-  </div>
-  <!--/.Call to action-->
-
-  <!--Copyright-->
-  <div class="footer-copyright py-5">
-    <ul class="list-inline small footer-nav">
+    <hr class="my-3">
+    <ul class="list-inline mb-0 small footer-nav">
       {% assign navigations = site.pages | where:"nav_group","footer" | sort: 'nav_order' %}
       {% for item in navigations %}
       <li class="list-inline-item {% if item.url == page.url %}active{% endif %}">
@@ -22,7 +18,11 @@
         <a href="/blog/feed.xml" class="nav-link">RSS</a>
       </li>
     </ul>
-    <hr class="my-3">
+  </div>
+  <!--/.Call to action-->
+
+  <!--Copyright-->
+  <div class="footer-copyright py-5">
     <p class="lead"><a href="/" class="text-light"><i class="fas fa-water mr-2"></i>{{ site.name}}</a></p>
     <p class="mb-0 text-light"><i class="fab fa-creative-commons fa-lg"></i><i class="fab fa-creative-commons-by fa-lg"></i><i class="fab fa-creative-commons-nc fa-lg"></i><i class="fab fa-creative-commons-sa fa-lg"></i></p>
     <p class="text-light small">Unless otherwisely noted, content on this website is licensed under:<br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="text-light">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a></p>
