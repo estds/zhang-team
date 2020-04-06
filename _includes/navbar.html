@@ -17,8 +17,8 @@
       <ul class="navbar-nav mr-auto">
         {% assign navigations = site.pages | where:"nav_group","navbar" | sort: 'nav_order' %}
         {% for item in navigations %}
-        <li class="nav-item">
-          <a href="{{ item.url }}" class="nav-link {% if item.url == page.url %}active{% endif %}">
+        <li class="nav-item {% if item.url == page.url %}active{% endif %}">
+          <a href="{{ item.url }}" class="nav-link">
             {{ item.title }}
           </a>
         </li>
