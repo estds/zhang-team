@@ -5,7 +5,7 @@
   <div class="container py-5 d-print-none">
     {% include share-buttons.html sns_button_class="btn-outline-warning" qr_button_class="btn-outline-light" %}
     <hr class="my-3">
-    <ul class="nav justify-content-center mb-0">
+    <ul class="nav justify-content-center small mb-0">
       {% assign navigations = site.pages | where:"nav_group","footer" | sort: "nav_order" %}
       {% for item in navigations %}
       <li class="nav-item{% if item.url == page.url %} active{% endif %}">
