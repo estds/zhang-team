@@ -8,8 +8,8 @@
     <ul class="nav justify-content-center small mb-0">
       {% assign navigations = site.pages | where:"nav_group","footer" | sort: "nav_order" %}
       {% for item in navigations %}
-      <li class="nav-item{% if item.url == page.url %} active{% endif %}">
-        <a href="{{ item.url }}" class="nav-link">
+      <li class="nav-item">
+        <a href="{{ item.url }}" class="nav-link{% if item.url == page.url %} active{% endif %}">
           {{ item.title }}
         </a>
       </li>
