@@ -1,6 +1,5 @@
 ---
 layout: feed
-lang: en
 ---
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
@@ -15,8 +14,7 @@ lang: en
 	<managingEditor>estds@nhri.cn (ESTDS)</managingEditor>
 	<webMaster>estds@nhri.cn (ESTDS)</webMaster>
 	<ttl>60</ttl>
-	{% assign posts=site.posts | where:"lang", page.lang %}
-	{% for post in posts %}
+	{% for post in site.posts %}
 	<item>
 		<title>{{ post.title }}</title>
 		<link>{{ site.baseurl }}{{ post.url }}</link>
