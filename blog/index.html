@@ -4,7 +4,6 @@ title: Blog
 nav_group: navbar
 nav_order: 20
 ---
-
 <main class="ribboned-page post">
   <div class="page-ribbon bg-info bg-by-attr d-print-none" data-image="https://cdn.jsdelivr.net/gh/estds/zhang-team/assets/img/needleleaf-forest.jpg">
   </div>
@@ -13,14 +12,19 @@ nav_order: 20
     <div class="row">
       <div class="col-12 my-5 px-md-5">
         <div aria-label="content">
-          <h1 class="mb-4">{{ page.title }}</h1>
-          {{ content }}
-          <ul class="list-unstyled my-3 small text-light">
-            <li>Published: <time datetime="{{ include.time | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></li>
-            {% if page.fimage and page.fimage_credit %}<li>Feature image: {{ page.fimage_credit }}</li>{% endif %}
-          </ul>
+          <h1 class="mb-4">Blog</h1>
+          <div class="list-group list-group-flush blog-entry-list">
+            {% for post in site.posts %}
+            <article class="post list-group-item px-0">
+              <h2><a class="text-decoration-none" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+              <p>{{ post.abstract }} <a href="{{ post.url }}" title="{{ post.title }}" class="badge badge-primary">Read on<i class="far fa-arrow-alt-circle-right ml-1"></i></a></p>
+              <p class="text-secondary meta small">{{ post.date | date_to_string }}</p>
+            </article>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </main>
+
