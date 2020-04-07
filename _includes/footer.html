@@ -6,7 +6,7 @@
     {% include share-buttons.html sns_button_class="btn-outline-warning" qr_button_class="btn-outline-light" %}
     <hr class="my-3">
     <ul class="list-inline mb-0 small footer-nav">
-      {% assign navigations = site.pages | where:"nav_group","footer" | sort: 'nav_order' %}
+      {% assign navigations = site.pages | where:"nav_group","footer" | sort: "nav_order" %}
       {% for item in navigations %}
       <li class="list-inline-item {% if item.url == page.url %}active{% endif %}">
         <a href="{{ item.url }}" class="nav-link">
