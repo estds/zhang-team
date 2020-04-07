@@ -51,7 +51,15 @@
 /* Adding color to the Navbar on mobile */
 @media only screen and (max-width: 768px) {
   .navbar {
-    background-color: #1C2331; } }
+    	background-color: #1C2331; 
+    }
+}
+
+@media only screen and (max-width: 575px) {
+  .full-page-intro .display-4 {
+    	font-size: 2.5em
+    }
+}
     
 @media print {
 	.ribboned-page > .container {
