@@ -20,3 +20,4 @@ Besides photographs credited in each individual page, these works of the followi
 - [Aerial view of body of water near trees](https://unsplash.com/photos/NBbB6y1YvBE) by Patrick Xu, license free
 - [Brown and green trees](https://unsplash.com/photos/JsqAqevX6lg) by Kim Daniel, license free
 - [Body of water near grounded covered with snow](https://unsplash.com/photos/hwf_LcQpcns) by Owen Spencer, license free
+- [Rule of thirds photography of boat on body of water](https://unsplash.com/photos/qHJYH2o4QNY) by Yue Su, license free
