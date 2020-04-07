@@ -1,3 +1,7 @@
+.popover {
+	border-radius: 0.125rem;
+}
+
 .full-page-intro {
 	height: 100vh;
 }
