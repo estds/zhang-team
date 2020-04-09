@@ -5,7 +5,7 @@ date: 2020-04-09
 abstract: "This is another sample post."
 ---
 
-This is a sample post. You may create more posts like this.
+This is a sample post. You may create more posts like this. You may notice that there is an automatically created table of contents on the right when you put more than two level 2 titles (``h2``) in this post.
 
 ## Item 1
 
