@@ -87,6 +87,7 @@ main .content h2 {
 	bottom: 1rem;
 	right: 1rem;
 	position: fixed;
+	display: none;
 }
 
 /* share button styles */
