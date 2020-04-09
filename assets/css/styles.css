@@ -86,6 +86,7 @@ main .content h2 {
 #to-top {
 	bottom: 1rem;
 	right: 1rem;
+	position: fixed;
 }
 
 /* share button styles */
