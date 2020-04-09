@@ -97,9 +97,6 @@ shareButton.addEventListener('click', event => {
     .catch(console.error);
 });
 
-
-
-
 // Scrolls smoothly to anchor
 $(document).ready(function() {
   // Add smooth scrolling to all .sjump links
