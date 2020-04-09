@@ -63,6 +63,10 @@
 	min-height: 80vh;
 }
 
+main .content h2 {
+	padding-top: 48px;
+}
+
 .toc-card {
   max-width: 100%;
   top: 60px;
