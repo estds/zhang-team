@@ -6,7 +6,9 @@ nav_order: 10
 fimage: /assets/img/thank-you-card.jpg
 fimage_credit: <a href="https://unsplash.com/photos/vD6UFu8QYUI">Jon Tyson, license free</a>
 ---
-This website is hosted on [GitHub.com](https://github.com/estds/zhang-team/).
+We are setting up this page to show our sincere appreciation towards those who have made this website possible.
+
+This website is hosted on [GitHub.com](https://github.com/estds/zhang-team/). We are grateful to their generosity.
 
 We are thankful to the communities contributing to these wonderful open-source projects:
 
