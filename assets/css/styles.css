@@ -72,10 +72,20 @@ main .content h2 {
   top: 60px;
 }
 
+.toc-card .toc-header-text:not(.collapsed) {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
 .toc-card .list-group .list-group-item {
   border-left: 0;
   border-right: 0;
   border-radius: 0;
+}
+
+#to-top {
+	bottom: 1rem;
+	right: 1rem;
 }
 
 /* share button styles */
