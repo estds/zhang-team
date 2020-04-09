@@ -16,16 +16,24 @@
         $('#toc-list').append('<a href="#' + $(this).attr('id') + '" class="list-group-item list-group-item-action text-truncate sjump">' + $(this).text() + '</a>');
       });
     }
-    
+
     var win_width = $(window).width();
-    
+
     if (win_width < 576) {
-    	$('.toc-collapse').collapse('hide');
+      $('.toc-collapse').collapse('hide');
     }
 
     $('body').scrollspy({
       target: '#toc-list'
     })
+
+    $(window).resize(function() {
+      if (win_width < 576) {
+        $('.toc-collapse').collapse('hide');
+      } else {
+        $('.toc-collapse').collapse('show');
+      }
+    });
 
   });
 </script>
