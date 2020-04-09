@@ -13,7 +13,7 @@
       $(".toc-card").removeClass('d-none');
 
       $('.content-with-toc').find('h2[id]').each(function() {
-        $('#toc-list').append('<a href="#' + $(this).attr('id') + '" class="list-group-item list-group-item-action text-truncate">' + $(this).text() + '</a>');
+        $('#toc-list').append('<a href="#' + $(this).attr('id') + '" class="list-group-item list-group-item-action text-truncate sjump">' + $(this).text() + '</a>');
       });
     }
 
