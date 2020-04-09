@@ -22,16 +22,6 @@
         $('.toc-collapse').collapse('hide');
       }
 
-      $(window).resize(function() {
-        var win_resize_width = $(window).width();
-        if (win_resize_width < 576) {
-          $('.toc-collapse').collapse('hide');
-        } else {
-          $('.toc-collapse').collapse('show');
-        }
-      })
-    }
-
     $('body').scrollspy({
       target: '#toc-list'
     })
