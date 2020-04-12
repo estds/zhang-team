@@ -23,6 +23,7 @@
 
 main .content h2 {
 	padding-top: 48px;
+	padding-bottom: 16px;
 }
 
 .toc-card {
