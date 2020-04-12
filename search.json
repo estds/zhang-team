@@ -8,7 +8,7 @@
   "url": "{{ post.url | prepend: site.baseurl }}"
   },
   {% endfor %}
-  {% for page in site.pages %}{% unless page.search_exclusion == "true" %}
+  {% for page in site.pages %}{% unless page.search_inclusion == "false" %}
   {
   "title": "{{ page.title | escape }}",
   "abstract" : "{{page.abstract | strip_html | strip_newlines | escape }}",
