@@ -8,11 +8,11 @@
   "url": "{{ post.url | prepend: site.baseurl }}"
   },
   {% endfor %}
-  {% for page in site.pages %}
+  {% for page in site.pages %}{% unless page.search_exclusion == "true" %}
   {
   "title": "{{ page.title | escape }}",
   "abstract" : "{{page.abstract | strip_html | strip_newlines | escape }}",
   "url": "{{ page.url | prepend: site.baseurl }}"
-  }{% unless forloop.last %},{% endunless %}
+  }{% unless forloop.last %},{% endunless %}{% endunless %}
   {% endfor %}
 ]
