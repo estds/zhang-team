@@ -1,4 +1,5 @@
 ---
+search_inclusion: false
 ---
 [
   {% for post in site.posts %}
