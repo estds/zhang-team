@@ -180,7 +180,7 @@ $(function() {
       templates: {
         notFound: '<div class="dropdown-item small disabled empty-message">Nothing found</div>',
         suggestion: function(data) {
-          return '<div class="dropdown-item small"><h6 class="text-truncate">' + data.title + '</h6><p class="mb-0 text-truncate">' + data.abstract + '</p></div>';
+          return '<div class="dropdown-item py-3 small"><h6 class="text-truncate my-1">' + data.title + '</h6><p class="my-1 text-truncate">' + data.abstract + '</p></div>';
         },
       }
     });
