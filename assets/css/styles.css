@@ -4,6 +4,7 @@
 
 .navbar #prefetch-search .twitter-typeahead {
 	width: 100%; 
+	min-width: 12rem;
 }
 
 /** animate the navbar toggle **/
