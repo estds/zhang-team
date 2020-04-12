@@ -178,7 +178,7 @@ $(function() {
       display: 'title',
       source: pages,
       templates: {
-        notFound: '<div class="dropdown-item small disabled empty-message">Nothing found</div>',
+        notFound: '<div class="dropdown-item py-2 small disabled empty-message">Nothing found</div>',
         suggestion: function(data) {
           return '<div class="dropdown-item py-2 small"><h6 class="text-truncate my-1">' + data.title + '</h6><p class="my-1 text-truncate">' + data.abstract + '</p></div>';
         },
