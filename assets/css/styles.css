@@ -2,6 +2,10 @@
 	border-radius: 0.125rem;
 }
 
+.navbar #prefetch-search .twitter-typeahead {
+	width: 100%; 
+}
+
 /** animate the navbar toggle **/
 .icon-bar {
 	width: 22px; 
