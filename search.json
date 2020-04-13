@@ -12,7 +12,7 @@ search_inclusion: false
   {% for page in site.pages %}
   {
   "title" : "{{ page.title | escape }}",
-  "abstract" : {% if page.search_inclusion == "no" %}"Not included"{% else %}"{{page.abstract | strip_html | strip_newlines | escape }}",{% endif %}
+  "abstract" : {% if page.search_inclusion == "no" %}"Not included"{% else %}"{{page.abstract | strip_html | strip_newlines | escape }}"{% endif %},
   "url" : "{{ page.url | prepend: site.baseurl }}"
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
