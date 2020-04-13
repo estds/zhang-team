@@ -1,5 +1,5 @@
 ---
-search_inclusion: false
+search_exclusion: yes
 ---
 [
   {% for post in site.posts %}
