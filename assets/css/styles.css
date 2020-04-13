@@ -1,5 +1,5 @@
 ---
-search_inclusion: no
+search_exclusion: yes
 ---
 .popover {
 	border-radius: 0.125rem;
