@@ -5,7 +5,7 @@ nav_group: footer
 nav_order: 10
 fimage: /assets/img/thank-you-card.jpg
 fimage_credit: <a href="https://unsplash.com/photos/vD6UFu8QYUI">Jon Tyson, license free</a>
-abstract: "We want to say thank you to these people and orgnisations for the development of this website."
+abstract: "We want to say thank you to these people and organisations for the development of this website."
 ---
 We are setting up this page to show our sincere appreciation towards those who have made this website possible.
 
