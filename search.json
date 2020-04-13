@@ -9,7 +9,7 @@ search_inclusion: false
   "url": "{{ post.url | prepend: site.baseurl }}"
   },
   {% endfor %}
-  {% assign filtered_pages = site.pages | where_exp: "item","item.search_inclusion != no" %}{% for item in filtered_pages %}
+  {% assign filtered_pages = site.pages | where_exp: "item","item.search_inclusion == no" %}{% for item in filtered_pages %}
   {
   "title" : "{{ item.title | escape }}",
   "abstract" : "{{ item.abstract | strip_html | strip_newlines | escape }}",
